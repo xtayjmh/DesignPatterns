@@ -16,7 +16,20 @@ namespace ConsoleApp1.DesignModes.Decorator
         }
         public override double Cost()
         {
-            return beverage.Cost() + .10;
+            var cost = 0.05;
+            switch (beverage.CupSize)
+            {
+                case CupSize.Tall:
+                    cost = 0.05;
+                    break;
+                case CupSize.Grand:
+                    cost = 0.1;
+                    break;
+                case CupSize.Venti:
+                    cost = 0.15;
+                    break;
+            }
+            return beverage.Cost() + cost;
         }
     }
 }

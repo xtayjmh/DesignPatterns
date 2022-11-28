@@ -10,4 +10,14 @@ public abstract class Beverage
     }
 
     public abstract double Cost();
+    public CupSize CupSize { get; set; } = CupSize.Grand;
+    public CupSize GetSize() => this.CupSize;
+    public void SetSize(CupSize size) => CupSize = size;
+
+}
+public enum CupSize
+{
+    Tall,
+    Grand,
+    Venti
 }

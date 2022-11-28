@@ -25,9 +25,15 @@ namespace ConsoleApp1.DesignModes.Decorator
             beverage2 = new Soy(beverage2);
             Console.WriteLine($"{beverage2.GetDescription()} ${beverage2.Cost()}");
 
-            Beverage beverage3 = new Espresso();
-            beverage3 = new Tall(beverage3);
+            Console.WriteLine("Venti Espresso");
+            Beverage beverage3 = new Espresso() { CupSize = CupSize.Venti };
+            beverage3 = new Mocha(beverage3);
             Console.WriteLine($"{beverage3.GetDescription()} {beverage3.Cost()}");
+            
+            Console.WriteLine("Tall Espresso");
+            Beverage beverage4 = new Espresso() { CupSize = CupSize.Tall };
+            beverage4 = new Mocha(beverage4);
+            Console.WriteLine($"{beverage4.GetDescription()} {beverage4.Cost()}");
         }
     }
 }
