@@ -2,6 +2,7 @@
 using ConsoleApp1.Models;
 using System.Threading.Tasks;using ConsoleApp1.DesignModes.Decorator;using ConsoleApp1.DesignModes.Factory;
 using ConsoleApp1.DesignModes.Observe;
+using ConsoleApp1.DesignModes.Command;
 
 //int[] input = { 4, 1, 2, 6, 9, 10, 3 };
 //int sum = 0;
@@ -32,6 +33,8 @@ using ConsoleApp1.DesignModes.Observe;
 // new StrategyPattern().Invoke(); //策略模式
 // new ObservePattern().Invoke(); //观察者模式
 // new DecoratorPattern().Invoke(); //装饰者模式
-new NYPizzaStore().Invoke(); //工厂模式&抽象工厂模式
+// new NYPizzaStore().Invoke(); //工厂模式&抽象工厂模式
 // new CAPizzaStore().Invoke();
+// new CommandPattern().Invoke(); //命令模式
+new MacroCommandPattern().Invoke();
 Console.ReadKey();//监听键盘事件，按任意键执行退出。
