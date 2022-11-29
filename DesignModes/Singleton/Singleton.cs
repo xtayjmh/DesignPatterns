@@ -3,15 +3,15 @@
 public class Singleton
 {
     // private static Singleton uniqueInstance;
-    private static volatile Singleton uniqueInstance; //volatile解决多线程中的单例模式的问题
+    private static volatile Singleton? _uniqueInstance; //volatile解决多线程中的单例模式的问题
 
     public Singleton() { }
 
-    public static Singleton Instance()
+    public static Singleton? Instance()
     {
-        if (uniqueInstance == null)
-            uniqueInstance = new Singleton();
+        if (_uniqueInstance == null)
+            _uniqueInstance = new Singleton();
 
-        return uniqueInstance;
+        return _uniqueInstance;
     }
 }
