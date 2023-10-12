@@ -29,6 +29,7 @@ namespace ConsoleApp1.DesignModes.Command
             remoteController.SetCommand(0, new MacroCommand(partyOnCommands), new MacroCommand(partyOffCommands));
             remoteController.OnKeyPressed(0);
             remoteController.OffKeyPressed(0);
+            remoteController.Undo();
             Console.WriteLine(remoteController.ToString());
             
         }
